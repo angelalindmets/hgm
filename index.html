@@ -289,40 +289,130 @@ a[href^="https://stan.store"]{transition:opacity .2s}a[href^="https://stan.store
 </section>
 
 <!-- MIDA SA SAAD -->
-<section style="background: #EFE2DF">
-<div style="max-width: 1100px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.22em; font-weight: 600; color: #8A3A42">THIS IS YOUR SPACE, GIRL</p>
-<h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.15; color: #5A0F16">Mida sa saad</h2>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 20px">
-<div style="flex: 1 1 230px; min-width: 0; background: #F7F1EC; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 8px">
-<p style="margin: 0; font-family: 'Playfair Display', serif; font-size: 40px; color: #C9A3A0; line-height: 1">01</p>
-<p style="margin: 0; font-weight: 600; font-size: 18px; color: #5A0F16">Privaatne HGM kogukond</p>
-<p style="margin: 0; font-size: 16px">Naised, kes ei lase sul vanasse skripti tagasi vajuda.</p>
-</div>
-<div style="flex: 1 1 230px; min-width: 0; background: #F7F1EC; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 8px">
-<p style="margin: 0; font-family: 'Playfair Display', serif; font-size: 40px; color: #C9A3A0; line-height: 1">02</p>
-<p style="margin: 0; font-weight: 600; font-size: 18px; color: #5A0F16">3 Q&amp;A-d Angelaga</p>
-<p style="margin: 0; font-size: 16px">Kord nädalas, kus saad küsida oma olukorra kohta.</p>
-</div>
-<div style="flex: 1 1 230px; min-width: 0; background: #F7F1EC; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 8px">
-<p style="margin: 0; font-family: 'Playfair Display', serif; font-size: 40px; color: #C9A3A0; line-height: 1">03</p>
-<p style="margin: 0; font-weight: 600; font-size: 18px; color: #5A0F16">Iganädalased videomaterjalid</p>
-<p style="margin: 0; font-size: 16px">Samm-sammult läbi teadliku loomise vundamendi.</p>
-</div>
-<div style="flex: 1 1 230px; min-width: 0; background: #F7F1EC; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 8px">
-<p style="margin: 0; font-family: 'Playfair Display', serif; font-size: 40px; color: #C9A3A0; line-height: 1">04</p>
-<p style="margin: 0; font-weight: 600; font-size: 18px; color: #5A0F16">Harjutused ja refleksioonid</p>
-<p style="margin: 0; font-size: 16px">Sest muutus ei tule kuulamisest, vaid tegemisest.</p>
-</div>
-</div>
-<div style="background: #5A0F16; color: #FFFFFF; border-radius: 20px; padding: 32px 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
-<p style="margin: 0; font-size: 19px; color: #F7E9E7; flex: 1 1 400px"><span style="font-family: 'Playfair Display', serif; font-size: 32px; color: #FFFFFF">21 € ehk 1 € päevas.</span><br>Võrdle seda hinnaga, mida maksad iga aasta, kui elad edasi vana skripti järgi.</p>
-<a href="https://stan.store/AngelaLindmets/p/hot-girls-manifest-vljakutse" style="background: #F7F1EC; color: #5A0F16; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 15px; letter-spacing: 0.12em; font-weight: 600">LIITUN →</a>
-</div>
-<p style="margin: 0; font-size: 16px; font-style: italic; color: #6B3A40; text-align: center">Väljakutse on HGM-i vundament. Neile, kes tahavad pärast seda maja edasi ehitada, avaneb jaanuaris HGM kogukond. Aga see on sinu valik, mitte kohustus.</p>
-</div>
+<section class="hgm-saad">
+  <style>
+    .hgm-saad {
+      --hgm-bordoo: #5b0f1e;
+      --hgm-roosa: #f6e6e8;
+      --hgm-tekst: #2b1a1d;
+      background: #ffffff;
+      padding: 72px 20px;
+      color: var(--hgm-tekst);
+    }
+    .hgm-saad * { box-sizing: border-box; }
+    .hgm-saad__pealkiri {
+      font-family: "Playfair Display", "Bodoni Moda", Georgia, serif;
+      color: var(--hgm-bordoo);
+      text-align: center;
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 500;
+      line-height: 1.15;
+      margin: 0 auto 48px;
+      max-width: 720px;
+    }
+    .hgm-saad__grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .hgm-saad__kaart {
+      flex: 0 0 33.333%;
+      padding: 32px 28px;
+      text-align: center;
+      border-left: 1px solid rgba(91, 15, 30, 0.15);
+    }
+    .hgm-saad__kaart:nth-child(3n + 1) { border-left: none; }
+    .hgm-saad__nr {
+      display: inline-block;
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--hgm-bordoo);
+      font-size: 15px;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .hgm-saad__nimi {
+      font-family: "Playfair Display", "Bodoni Moda", Georgia, serif;
+      color: var(--hgm-bordoo);
+      font-size: clamp(24px, 2.6vw, 30px);
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+    .hgm-saad__tekst {
+      font-size: 17px;
+      line-height: 1.7;
+      margin: 0 0 18px;
+    }
+    .hgm-saad__punch {
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+      color: var(--hgm-bordoo);
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .hgm-saad__lisa {
+      max-width: 640px;
+      margin: 40px auto 0;
+      padding: 20px 24px;
+      background: var(--hgm-roosa);
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .hgm-saad__kaart { flex-basis: 50%; border-left: none; border-top: 1px solid rgba(91, 15, 30, 0.15); }
+    }
+    @media (max-width: 600px) {
+      .hgm-saad { padding: 56px 16px; }
+      .hgm-saad__kaart { flex-basis: 100%; }
+      .hgm-saad__kaart { padding: 28px 8px; }
+      .hgm-saad__kaart:first-child { border-top: none; }
+    }
+  </style>
+
+  <h2 class="hgm-saad__pealkiri">Mida sa saad</h2>
+
+  <div class="hgm-saad__grid">
+    <div class="hgm-saad__kaart">
+      <span class="hgm-saad__nr">01</span>
+      <h3 class="hgm-saad__nimi">Iganädalane deep dive</h3>
+      <p class="hgm-saad__tekst">Igal esmaspäeval algab uus nädal ja avaneb uus kiht. Sukeldume süvitsi, et mõista, kuidas me üldse loome ja kuidas seda supervõimet oma päriselus rakendada.</p>
+      <p class="hgm-saad__punch">Info tarbimine on läbi. Nüüd me loome.</p>
+    </div>
+
+    <div class="hgm-saad__kaart">
+      <span class="hgm-saad__nr">02</span>
+      <h3 class="hgm-saad__nimi">Igapäevased harjutused</h3>
+      <p class="hgm-saad__tekst">Lühikesed ja konkreetsed, nii et jõuad need teha ka siis, kui päev on hull. Sest muutus ei sünni sellest, mida sa tead. See sünnib sellest, mida sa iga päev teed.</p>
+      <p class="hgm-saad__punch">Väike samm iga päev &gt; suur motivatsioon kord kuus.</p>
+    </div>
+
+    <div class="hgm-saad__kaart">
+      <span class="hgm-saad__nr">03</span>
+      <h3 class="hgm-saad__nimi">Q&amp;A-d minuga (3×)</h3>
+      <p class="hgm-saad__tekst">Küsi ÜKSKÕIK mida. See rahamuster, mis aina kordub. See suhe, kus jääd ikka samasse kohta. See mõte, mida sa pole kellelegi välja öelnud. Vaatame selle koos läbi ja sa lahkud plaaniga, mitte uute küsimustega.</p>
+      <p class="hgm-saad__punch">Ükski küsimus pole liiga suur. Ega liiga piinlik.</p>
+    </div>
+
+    <div class="hgm-saad__kaart">
+      <span class="hgm-saad__nr">04</span>
+      <h3 class="hgm-saad__nimi">Privaatne HGM kogukond</h3>
+      <p class="hgm-saad__tekst">Naised, kes tahavad samu asju nagu sina ja ei lase sul vanasse mustrisse tagasi vajuda. Siin jagad oma võite, küsid, kui kõhklus tuleb, ja keegi ei vaata sind imelikult, kui ütled, et tahad rohkem.</p>
+      <p class="hgm-saad__punch">Siin ei pea ennast väiksemaks tegema.</p>
+    </div>
+
+    <div class="hgm-saad__kaart">
+      <span class="hgm-saad__nr">05</span>
+      <h3 class="hgm-saad__nimi">Oma tempos</h3>
+      <p class="hgm-saad__tekst">Elu juhtub. Kui päev jääb vahele, jätkad sealt, kus pooleli jäid, ilma süütundeta. Kõik materjalid on sulle avatud 2026. aasta lõpuni.</p>
+      <p class="hgm-saad__punch">Ei mingit „jäin juba maha, pole mõtet“.</p>
+    </div>
+  </div>
+
+  <p class="hgm-saad__lisa">Jaanuaris avaneb tasuline HGM kogukond neile, kes tahavad jätkata. Täiesti vabatahtlik järgmine samm.</p>
 </section>
 
 <!-- ANGELA -->
